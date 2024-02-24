@@ -31,7 +31,7 @@ h1 {
 
 main {
   padding: 20px;
-  background-image: url(D:\solar\1039150556-preview.gif); /* Replace 'your-gif-url.gif' with the URL of your GIF */
+  background-image: url('1039150556-preview.gif'); /* Replace 'your-gif-url.gif' with the URL of your GIF */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
