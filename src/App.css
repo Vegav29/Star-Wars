@@ -1,38 +1,183 @@
-.App {
+body {
+  margin: 0;
+  font-family: vegsh;
+  background-color: #f0f0f0;
+}
+
+@font-face {
+  font-family: vegsh;
+  src: url(D:\solar\starjedi\Starjedi.ttf);
+}
+
+header {
+  background-color: #333;
+  font-family: vegsh;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+main {
+  padding: 20px;
+  background-image: url(D:\solar\1039150556-preview.gif); /* Replace 'your-gif-url.gif' with the URL of your GIF */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Ensure the main element covers the entire viewport height */
+}
+  
+.planets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.planet-card {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.planet-card:hover {
+  transform: scale(1.05);
+}
+
+.planet-card h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: white; /* Add this line to change text color to white */
+}
+
+.load-more-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.load-more-btn:hover {
+  background-color: #0056b3;
+}
+
+.planet-details-card {
+  background: rgba(255, 255, 255, 0.15);
+  color: #f0f0f0;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  transition: transform 0.3s ease;
+}
+
+.planet-details-card:hover {
+  transform: scale(1.05);
+}
+
+.planet-details-card h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.planet-details-card p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+.center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.residents-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.residents-button:hover {
+  background-color: #0056b3;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.home-btn {
+  display: inline-block;
+  background-color: #333;
   color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.home-btn:hover {
+  background-color: #555;
+}
+.residents-card {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 20px;
+  margin-top: 20px;
+  transition: transform 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.residents-card:hover {
+  transform: scale(1.05);
+}
+
+.residents-card h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.residents-card li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .planets {
+    justify-content: flex-start;
+    padding: 0 20px;
   }
-  to {
-    transform: rotate(360deg);
+  .planet-card {
+    width: calc(50% - 20px);
   }
+
+  .planet-details-card {
+    margin: 20px auto;
+  }
+
 }
